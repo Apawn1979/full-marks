@@ -11,7 +11,7 @@ jobs:
         run: yarn && yarn build
 
       - name: page-deploy
-        uses: actions/deploy-pages@v1
+        run: actions/deploy-pages@v1
 #        env:
 #          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
 #          TARGET_REPO: Apawn1979/full-marks
