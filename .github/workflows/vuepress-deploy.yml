@@ -8,10 +8,11 @@ jobs:
         uses: actions/checkout@master
 
       - name: vuepress-deploy
-        uses: jenkey2011/vuepress-deploy@master
-        env:
-          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-          TARGET_REPO: Apawn1979/full-marks
-          TARGET_BRANCH: master
-          BUILD_SCRIPT: yarn && yarn build
-          BUILD_DIR: docs
+        run: yarn && yarn build
+#        uses: jenkey2011/vuepress-deploy@master
+#        env:
+#          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+#          TARGET_REPO: Apawn1979/full-marks
+#          TARGET_BRANCH: master
+#          BUILD_SCRIPT: yarn && yarn build
+#          BUILD_DIR: docs
