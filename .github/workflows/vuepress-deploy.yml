@@ -7,9 +7,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@master
 
-      - name: vuepress-deploy
+      - name: vuepress-build
         run: yarn && yarn build
-#        uses: jenkey2011/vuepress-deploy@master
+
+      - name: page-deploy
+        uses: actions/pages-build-deployment
 #        env:
 #          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
 #          TARGET_REPO: Apawn1979/full-marks
