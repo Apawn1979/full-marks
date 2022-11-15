@@ -2,6 +2,7 @@ const nav = require('./nav-bar')
 const sidebar = require('./side-bar')
 module.exports = {
   port: 7910,
+  dest: './notes',
   plugins: [
     'mermaidjs',
     'flowchart'
