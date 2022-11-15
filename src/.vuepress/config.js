@@ -3,6 +3,7 @@ const sidebar = require('./side-bar')
 module.exports = {
   port: 7910,
   dest: './docs',
+  base: '/full-marks/',
   plugins: [
     'mermaidjs',
     'flowchart'
