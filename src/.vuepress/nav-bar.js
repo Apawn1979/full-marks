@@ -1,12 +1,13 @@
+const { base } = require('./base');
 module.exports = [
   {
     text: '转义字符表',
-    link: '/md/escape-characters',
+    link: `${base}md/escape-characters`,
     target: '_blank'
   },
   {
     text: 'Emoji',
-    link: '/md/emoji',
+    link: `${base}md/emoji`,
     target: '_blank'
   },
   {

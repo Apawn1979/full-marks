@@ -1,9 +1,11 @@
+const { base } = require('./base');
 const nav = require('./nav-bar')
 const sidebar = require('./side-bar')
 module.exports = {
+  host: 'localhost',
   port: 7910,
   dest: './docs',
-  base: '/full-marks/',
+  base,
   plugins: [
     'mermaidjs',
     'flowchart'
