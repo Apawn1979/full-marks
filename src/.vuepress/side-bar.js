@@ -71,6 +71,7 @@ module.exports = [
   {
     title: '工具',
     children: [
+      '/tools/tools-list',
       '/tools/webpack',
       '/tools/n',
       '/tools/onrm',
