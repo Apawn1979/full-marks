@@ -47,7 +47,10 @@ module.exports = [
     title: 'Nginx'
   },
   {
-    title: '规范'
+    title: '规范',
+    children: [
+      '/git/commit-message'
+    ]
   },
   {
     title: 'Git',
