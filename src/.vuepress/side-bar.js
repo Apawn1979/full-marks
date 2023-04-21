@@ -89,5 +89,11 @@ module.exports = [
       '/misc/fe-engineering',
       '/misc/glob-pattern'
     ]
+  },
+  {
+    title: '小程序',
+    children: [
+      '/mini-program/alipay/image-trap',
+    ]
   }
 ]
