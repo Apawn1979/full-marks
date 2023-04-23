@@ -93,7 +93,8 @@ module.exports = [
   {
     title: '小程序',
     children: [
-      '/mini-program/alipay/image-trap',
+      '/mini-program/alipay/image-preview',
+      '/mini-program/alipay/image-default-source',
     ]
   }
 ]
