@@ -4,7 +4,7 @@ heroImage: /icon-100.png
 heroText: 满分笔记
 tagline: 记录工作和学习中有用的信息
 actionText: 开卷有益 →
-actionLink: /js/ast
+actionLink: /cli/shell
 features:
 - title: 精心组织
   details: 知识分门别类，便于形成体系；图文并茂，知识精髓一目了然，简洁清晰。

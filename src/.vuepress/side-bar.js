@@ -1,5 +1,35 @@
 module.exports = [
   {
+    title: '规范',
+    children: [
+      '/git/commit-message'
+    ]
+  },
+  {
+    title: 'Git',
+    children: [
+      '/git/reset-vs-checkout',
+      '/git/tilde-and-caret'
+    ]
+  },
+  {
+    title: 'Nginx'
+  },
+  {
+    title: 'CLI',
+    children: [
+      '/cli/shell',
+    ]
+  },
+  {
+    title: '小程序',
+    children: [
+      '/mini-program/common/localstorage-limitation',
+      '/mini-program/alipay/image-preview',
+      '/mini-program/alipay/image-default-source',
+    ]
+  },
+  {
     title: 'Javascript',
     children: [
       '/js/ast',
@@ -44,22 +74,6 @@ module.exports = [
     ]
   },
   {
-    title: 'Nginx'
-  },
-  {
-    title: '规范',
-    children: [
-      '/git/commit-message'
-    ]
-  },
-  {
-    title: 'Git',
-    children: [
-      '/git/reset-vs-checkout',
-      '/git/tilde-and-caret'
-    ]
-  },
-  {
     title: 'ESLint'
   },
   {
@@ -88,14 +102,6 @@ module.exports = [
     children: [
       '/misc/fe-engineering',
       '/misc/glob-pattern'
-    ]
-  },
-  {
-    title: '小程序',
-    children: [
-      '/mini-program/common/localstorage-limitation',
-      '/mini-program/alipay/image-preview',
-      '/mini-program/alipay/image-default-source',
     ]
   }
 ]
