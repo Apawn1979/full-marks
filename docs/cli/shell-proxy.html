@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Shell 基本代理配置 | 满分笔记</title>
+    <meta name="generator" content="VuePress 1.7.1">
+    <link rel="stylesheet" href="/full-marks/katex-css/katex.min.css">
+    <link rel="stylesheet" href="/full-marks/katex-css/github-markdown.min.css">
+    <meta name="description" content="记录工作和学习中有用的信息">
+    
+    <link rel="preload" href="/full-marks/assets/css/0.styles.20efdb12.css" as="style"><link rel="preload" href="/full-marks/assets/js/app.72812b7b.js" as="script"><link rel="preload" href="/full-marks/assets/js/3.8d2c4b47.js" as="script"><link rel="preload" href="/full-marks/assets/js/9.d5bc0e43.js" as="script"><link rel="prefetch" href="/full-marks/assets/js/10.6217bb7a.js"><link rel="prefetch" href="/full-marks/assets/js/11.fa38aef2.js"><link rel="prefetch" href="/full-marks/assets/js/12.3b4dcebe.js"><link rel="prefetch" href="/full-marks/assets/js/13.15306b82.js"><link rel="prefetch" href="/full-marks/assets/js/14.e70479e2.js"><link rel="prefetch" href="/full-marks/assets/js/15.a56dba27.js"><link rel="prefetch" href="/full-marks/assets/js/16.605288be.js"><link rel="prefetch" href="/full-marks/assets/js/17.daf5c0f2.js"><link rel="prefetch" href="/full-marks/assets/js/18.35fe5fdd.js"><link rel="prefetch" href="/full-marks/assets/js/19.8f44a994.js"><link rel="prefetch" href="/full-marks/assets/js/20.0f384341.js"><link rel="prefetch" href="/full-marks/assets/js/21.c1f6af70.js"><link rel="prefetch" href="/full-marks/assets/js/22.6bca6658.js"><link rel="prefetch" href="/full-marks/assets/js/23.0825f7f0.js"><link rel="prefetch" href="/full-marks/assets/js/24.35a677d0.js"><link rel="prefetch" href="/full-marks/assets/js/25.a8ad3c47.js"><link rel="prefetch" href="/full-marks/assets/js/26.574f1277.js"><link rel="prefetch" href="/full-marks/assets/js/27.5e863dcb.js"><link rel="prefetch" href="/full-marks/assets/js/28.5a694f3d.js"><link rel="prefetch" href="/full-marks/assets/js/29.a9de1bb4.js"><link rel="prefetch" href="/full-marks/assets/js/30.545fbee9.js"><link rel="prefetch" href="/full-marks/assets/js/31.4760f7db.js"><link rel="prefetch" href="/full-marks/assets/js/32.c8d950c4.js"><link rel="prefetch" href="/full-marks/assets/js/33.c5b4d316.js"><link rel="prefetch" href="/full-marks/assets/js/34.86e6867a.js"><link rel="prefetch" href="/full-marks/assets/js/35.f8018f53.js"><link rel="prefetch" href="/full-marks/assets/js/36.a0e93b33.js"><link rel="prefetch" href="/full-marks/assets/js/37.aa45dcce.js"><link rel="prefetch" href="/full-marks/assets/js/4.a38bb6f9.js"><link rel="prefetch" href="/full-marks/assets/js/5.71041521.js"><link rel="prefetch" href="/full-marks/assets/js/6.fb430fbb.js"><link rel="prefetch" href="/full-marks/assets/js/7.8874b7ad.js"><link rel="prefetch" href="/full-marks/assets/js/8.b2d4b176.js"><link rel="prefetch" href="/full-marks/assets/js/vendors~flowchart.4f6f7a0b.js">
+    <link rel="stylesheet" href="/full-marks/assets/css/0.styles.20efdb12.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/full-marks/" class="home-link router-link-active"><img src="/full-marks/icon-100.png" alt="满分笔记" class="logo"> <span class="site-name can-hide">满分笔记</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/full-marks/md/escape-characters.html" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  转义字符表
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="/full-marks/md/emoji.html" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Emoji
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://vuepress.vuejs.org/zh/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  VuePress
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/full-marks/md/escape-characters.html" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  转义字符表
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="/full-marks/md/emoji.html" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Emoji
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div><div class="nav-item"><a href="https://vuepress.vuejs.org/zh/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  VuePress
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>规范</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Git</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Nginx</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>CLI</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/full-marks/cli/shell.html" class="sidebar-link">查看/修改系统支持的shell</a></li><li><a href="/full-marks/cli/shell-proxy.html" aria-current="page" class="active sidebar-link">Shell 基本代理配置</a></li><li><a href="/full-marks/cli/ssh-err-connection-closed.html" class="sidebar-link">ssh 拉取 github 时报错</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>小程序</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Javascript</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>CSS</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Vite</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Vue</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>React</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Node</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>KOA</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>数据库</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>ESLint</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Markdown</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>工具</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>杂项</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="shell-基本代理配置"><a href="#shell-基本代理配置" class="header-anchor">#</a> Shell 基本代理配置</h1> <blockquote><p><strong>假设</strong>你用了 .oh-my-zsh</p></blockquote> <h2 id="编辑-bash-profile文件"><a href="#编辑-bash-profile文件" class="header-anchor">#</a> 编辑<code>.bash_profile</code>文件</h2> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token comment"># 没有就新建一个</span>
+<span class="token function">vim</span> ~/.bash_profile
+
+<span class="token comment"># 添加如下内容</span>
+<span class="token builtin class-name">export</span> <span class="token assign-left variable">https_proxy</span><span class="token operator">=</span>http://127.0.0.1:7890
+<span class="token builtin class-name">export</span> <span class="token assign-left variable">http_proxy</span><span class="token operator">=</span>http://127.0.0.1:7890
+<span class="token builtin class-name">export</span> <span class="token assign-left variable">all_proxy</span><span class="token operator">=</span>socks5://127.0.0.1:7891
+<span class="token comment">##上面的三行命令表示,每次新建一个终端会话时,默认让终端去走代理,这样就不需要每次都复制拷贝一下了,很方便,同时,代理程序去智能分流(国内 IP 直连,国外走代理)，避免了连接国内 IP 地址时“绕远”.</span>
+
+
+<span class="token builtin class-name">alias</span> <span class="token assign-left variable">setproxy</span><span class="token operator">=</span><span class="token string">&quot;export https_proxy=http://127.0.0.1:7890;export http_proxy=http://127.0.0.1:7890;export all_proxy=socks5://127.0.0.1:7891;echo <span class="token entity" title="\&quot;">\&quot;</span>Set proxy successfully<span class="token entity" title="\&quot;">\&quot;</span> &quot;</span>
+<span class="token builtin class-name">alias</span> <span class="token assign-left variable">unsetproxy</span><span class="token operator">=</span><span class="token string">&quot;unset http_proxy;unset https_proxy;unset all_proxy;echo <span class="token entity" title="\&quot;">\&quot;</span>Unset proxy successfully<span class="token entity" title="\&quot;">\&quot;</span> &quot;</span> 
+<span class="token builtin class-name">alias</span> <span class="token assign-left variable">ipcn</span><span class="token operator">=</span><span class="token string">&quot;curl myip.ipip.net&quot;</span>
+<span class="token builtin class-name">alias</span> <span class="token assign-left variable">ip</span><span class="token operator">=</span><span class="token string">&quot;curl ip.sb&quot;</span>
+
+
+<span class="token comment">## 上面这几个 alias 是自定义的命令</span>
+<span class="token comment">## unsetproxy 取消代理</span>
+<span class="token comment">## setproxy 设置代理</span>
+<span class="token comment">## ip &amp; ipcn 查看 终端IP &amp; 实际IP</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br></div></div><h2 id="编辑-zshrc-文件"><a href="#编辑-zshrc-文件" class="header-anchor">#</a> 编辑 <code>.zshrc</code> 文件</h2> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token function">vim</span> .zshrc       
+<span class="token comment"># If you come from bash you might have to change your $PATH.</span>
+<span class="token comment"># export PATH=$HOME/bin:/usr/local/bin:$PATH</span>
+
+<span class="token comment"># Path to your oh-my-zsh installation.</span>
+<span class="token builtin class-name">export</span> <span class="token assign-left variable">ZSH</span><span class="token operator">=</span><span class="token environment constant">$HOME</span>/.oh-my-zsh
+
+<span class="token comment"># Set name of the theme to load --- if set to &quot;random&quot;, it will</span>
+<span class="token comment"># load a random theme each time oh-my-zsh is loaded, in which case,</span>
+<span class="token comment"># to know which specific one was loaded, run: echo $RANDOM_THEME</span>
+<span class="token comment"># See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes</span>
+<span class="token assign-left variable">ZSH_THEME</span><span class="token operator">=</span><span class="token string">&quot;robbyrussell&quot;</span>
+
+<span class="token comment"># Set list of themes to pick from when loading at random</span>
+<span class="token comment"># Setting this variable when ZSH_THEME=random will cause zsh to load</span>
+<span class="token comment"># a theme from this variable instead of looking in $ZSH/themes/</span>
+<span class="token comment"># If set to an empty array, this variable will have no effect.</span>
+<span class="token comment"># ZSH_THEME_RANDOM_CANDIDATES=( &quot;robbyrussell&quot; &quot;agnoster&quot; )</span>
+
+<span class="token comment"># Uncomment the following line to use case-sensitive completion.</span>
+<span class="token comment"># CASE_SENSITIVE=&quot;true&quot;</span>
+
+<span class="token comment"># Uncomment the following line to use hyphen-insensitive completion.</span>
+<span class="token comment"># Case-sensitive completion must be off. _ and - will be interchangeable.</span>
+<span class="token comment"># HYPHEN_INSENSITIVE=&quot;true&quot;</span>
+
+<span class="token comment"># Uncomment one of the following lines to change the auto-update behavior</span>
+<span class="token comment"># zstyle ':omz:update' mode disabled  # disable automatic updates</span>
+<span class="token comment"># zstyle ':omz:update' mode auto      # update automatically without asking</span>
+<span class="token comment"># zstyle ':omz:update' mode reminder  # just remind me to update when it's time</span>
+
+<span class="token comment"># Uncomment the following line to change how often to auto-update (in days).</span>
+<span class="token comment"># zstyle ':omz:update' frequency 13</span>
+
+<span class="token comment"># Uncomment the following line if pasting URLs and other text is messed up.</span>
+<span class="token comment"># DISABLE_MAGIC_FUNCTIONS=&quot;true&quot;</span>
+
+<span class="token comment"># Uncomment the following line to disable colors in ls.</span>
+<span class="token comment"># DISABLE_LS_COLORS=&quot;true&quot;</span>
+
+<span class="token comment"># Uncomment the following line to disable auto-setting terminal title.</span>
+<span class="token comment"># DISABLE_AUTO_TITLE=&quot;true&quot;</span>
+
+<span class="token comment"># Uncomment the following line to enable command auto-correction.</span>
+<span class="token comment"># ENABLE_CORRECTION=&quot;true&quot;</span>
+
+<span class="token comment"># Uncomment the following line to display red dots whilst waiting for completion.</span>
+<span class="token comment"># You can also set it to another string to have that shown instead of the default red dots.</span>
+<span class="token comment"># e.g. COMPLETION_WAITING_DOTS=&quot;%F{yellow}waiting...%f&quot;</span>
+<span class="token comment"># Caution: this setting can cause issues with multiline prompts in zsh &lt; 5.7.1 (see #5765)</span>
+<span class="token comment"># COMPLETION_WAITING_DOTS=&quot;true&quot;</span>
+
+<span class="token comment"># Uncomment the following line if you want to disable marking untracked files</span>
+<span class="token comment"># under VCS as dirty. This makes repository status check for large repositories</span>
+<span class="token comment"># much, much faster.</span>
+<span class="token comment"># DISABLE_UNTRACKED_FILES_DIRTY=&quot;true&quot;</span>
+
+<span class="token comment"># Uncomment the following line if you want to change the command execution time</span>
+<span class="token comment"># stamp shown in the history command output.</span>
+<span class="token comment"># You can set one of the optional three formats:</span>
+<span class="token comment"># &quot;mm/dd/yyyy&quot;|&quot;dd.mm.yyyy&quot;|&quot;yyyy-mm-dd&quot;</span>
+<span class="token comment"># or set a custom format using the strftime function format specifications,</span>
+<span class="token comment"># see 'man strftime' for details.</span>
+<span class="token comment"># HIST_STAMPS=&quot;mm/dd/yyyy&quot;</span>
+
+<span class="token comment"># Would you like to use another custom folder than $ZSH/custom?</span>
+<span class="token comment"># ZSH_CUSTOM=/path/to/new-custom-folder</span>
+
+<span class="token comment"># Which plugins would you like to load?</span>
+<span class="token comment"># Standard plugins can be found in $ZSH/plugins/</span>
+<span class="token comment"># Custom plugins may be added to $ZSH_CUSTOM/plugins/</span>
+<span class="token comment"># Example format: plugins=(rails git textmate ruby lighthouse)</span>
+<span class="token comment"># Add wisely, as too many plugins slow down shell startup.</span>
+<span class="token assign-left variable">plugins</span><span class="token operator">=</span><span class="token punctuation">(</span>git zsh-syntax-highlighting zsh-autosuggestions<span class="token punctuation">)</span>
+
+<span class="token builtin class-name">source</span> <span class="token variable">$ZSH</span>/oh-my-zsh.sh
+<span class="token builtin class-name">source</span> ~/.bash_profile
+
+<span class="token comment"># User configuration</span>
+
+<span class="token comment"># export MANPATH=&quot;/usr/local/man:$MANPATH&quot;</span>
+
+<span class="token comment"># You may need to manually set your language environment</span>
+<span class="token comment"># export LANG=en_US.UTF-8</span>
+
+<span class="token comment"># Preferred editor for local and remote sessions</span>
+<span class="token comment"># if [[ -n $SSH_CONNECTION ]]; then</span>
+<span class="token comment">#   export EDITOR='vim'</span>
+<span class="token comment"># else</span>
+<span class="token comment">#   export EDITOR='mvim'</span>
+<span class="token comment"># fi</span>
+
+<span class="token comment"># Compilation flags</span>
+<span class="token comment"># export ARCHFLAGS=&quot;-arch x86_64&quot;</span>
+
+<span class="token comment"># Set personal aliases, overriding those provided by oh-my-zsh libs,</span>
+<span class="token comment"># plugins, and themes. Aliases can be placed here, though oh-my-zsh</span>
+<span class="token comment"># users are encouraged to define aliases within the ZSH_CUSTOM folder.</span>
+<span class="token comment"># For a full list of active aliases, run `alias`.</span>
+<span class="token comment">#</span>
+<span class="token comment"># Example aliases</span>
+<span class="token comment"># alias zshconfig=&quot;mate ~/.zshrc&quot;</span>
+<span class="token comment"># alias ohmyzsh=&quot;mate ~/.oh-my-zsh&quot;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br><span class="line-number">84</span><br><span class="line-number">85</span><br><span class="line-number">86</span><br><span class="line-number">87</span><br><span class="line-number">88</span><br><span class="line-number">89</span><br><span class="line-number">90</span><br><span class="line-number">91</span><br><span class="line-number">92</span><br><span class="line-number">93</span><br><span class="line-number">94</span><br><span class="line-number">95</span><br><span class="line-number">96</span><br><span class="line-number">97</span><br><span class="line-number">98</span><br><span class="line-number">99</span><br><span class="line-number">100</span><br><span class="line-number">101</span><br><span class="line-number">102</span><br><span class="line-number">103</span><br></div></div><h2 id="git-代理配置"><a href="#git-代理配置" class="header-anchor">#</a> Git 代理配置</h2> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token comment"># 没有就新建一个</span>
+<span class="token function">vim</span> ~/.ssh/config
+
+<span class="token comment"># 添加如下内容</span>
+Host *
+    ProxyCommand <span class="token function">nc</span> -X <span class="token number">5</span> -x localhost:7891 %h %p
+<span class="token comment">##第一行代表所有的 ssh 的主机</span>
+<span class="token comment">##第二行代表让所有的 ssh 的主机在连接的时候,通过你本地的端口为 7891 的 socks5 代理去连接,一般来讲,本地的 socks5 都是由翻墙工具提供</span>
+<span class="token comment">##诸如 Surge ClashX 或者 Ssr,所以,7891这个端口需要换成对应的服务端口即可</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/full-marks/cli/shell.html" class="prev">
+        查看/修改系统支持的shell
+      </a></span> <span class="next"><a href="/full-marks/cli/ssh-err-connection-closed.html">
+        ssh 拉取 github 时报错
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/full-marks/assets/js/app.72812b7b.js" defer></script><script src="/full-marks/assets/js/3.8d2c4b47.js" defer></script><script src="/full-marks/assets/js/9.d5bc0e43.js" defer></script>
+  </body>
+</html>
