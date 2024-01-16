@@ -19,6 +19,8 @@ module.exports = [
     title: 'CLI',
     children: [
       '/cli/shell',
+      '/cli/shell-proxy',
+      '/cli/ssh-err-connection-closed'
     ]
   },
   {
