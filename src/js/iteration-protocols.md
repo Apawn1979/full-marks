@@ -1,19 +1,44 @@
 ---
 tags:
-- 可迭代协议
-- 迭代器协议
+- 可迭代
+- 迭代器
 ---
 
 # 迭代协议
 
-```mermaid
-graph
-A(迭代协议)-->B(可迭代协议)-->C(&#64&#64iterator&#40&#41)
-                           C-->D(可通过 obj&#91Symbol.iterator&#93 访问)
-                           C-->D1(可以是普通函数)-->E2(应返回迭代器对象)
-                           C-->D2(可以是生成器函数)-->E2
-                                                   E2-.->|必须实现 next 方法|C1
-        A-->B1(迭代器协议)-->C1(next&#40param?:any&#41)-->D3(返回值对象)
-                                                    D3-->E(属性 done:boolean)
-                                                    D3-->E1(属性 value:any)
+## 包括
+1. 可迭代协议
+2. 迭代器协议
+
+## 什么是可迭代？
+
+一个对象，实现了`@@iterator`方法，该方法返回一个【**迭代器**】对象。
+
+```ts
+interface Iterable {
+  @@iterator: () => Iterator;
+}
 ```
+
+> 注：`@@iterator`方法无法按常规语法访问，可这样访问：
+> `obj[Symbol.iterator]`
+
+## 什么是迭代器？
+
+一个对象，实现了 `next()`方法，该方法返回一个【**迭代器结果**】对象。
+
+```ts
+interface Iterator {
+  next: () => IteratorResult;
+}
+```
+
+## 迭代器结果长什么样？
+```ts
+interface IteratorResult {
+  value: any;
+  done: boolean;
+}
+```
+
+说明：本文仅提炼最核心的概念，详情请参考：[MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#%E5%8F%AF%E8%BF%AD%E4%BB%A3%E5%8D%8F%E8%AE%AE)。
