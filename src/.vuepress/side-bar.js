@@ -43,7 +43,8 @@ module.exports = [
     title: 'CSS',
     children: [
       '/css/hide-scroll-bar',
-      '/css/multi-line-text-overflow'
+      '/css/multi-line-text-overflow',
+      '/css/safe-area-inset-bottom'
     ]
   },
   {
