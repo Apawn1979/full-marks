@@ -27,6 +27,7 @@ module.exports = [
     title: '小程序',
     children: [
       '/mini-program/common/localstorage-limitation',
+      '/mini-program/common/rpx-to-vmin',
       '/mini-program/alipay/image-preview',
       '/mini-program/alipay/image-default-source',
     ]
