@@ -1,22 +1,20 @@
 # 尺寸单位 rpx 转换为 vmin
 
-## 原理
-1rpx 是屏宽的 $\frac{1}{750}$，1vmin 是屏宽的 $\frac{1}{100}$。
+## 原理：设屏宽为 `w`
+$$
+1w=750rpx=100vmin
+$$
 
-## rpx 和 vmin 的对应关系  
+## rpx 和 vmin 的换算
 $$
+\begin{aligned}
 1rpx=\frac{100}{750}vmin=\frac{10}{75}vmin
-$$
-$$
+\\
 1vmin=\frac{750}{100}rpx=7.5rpx
+\end{aligned}
 $$
-## 例如：10rpx，换算为 vmin
+
+## 例：32rpx，换算为 vmin
 $$
-10rpx=10\times\frac{10}{75}=\frac{100}{75}=1.\dot{3}vmin
+32rpx=32\times\frac{10}{75}=\frac{320}{75}=4.2\dot{6}vmin
 $$
-## 对应 wxss 为
-```css
-.selector {
-  font-size: calc(10vmin * 10 / 75);
-}
-```

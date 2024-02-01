@@ -28,6 +28,7 @@ module.exports = [
     children: [
       '/mini-program/common/localstorage-limitation',
       '/mini-program/common/rpx-to-vmin',
+      '/mini-program/common/font-size-on-landscape',
       '/mini-program/alipay/image-preview',
       '/mini-program/alipay/image-default-source',
     ]
