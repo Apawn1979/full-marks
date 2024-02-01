@@ -46,7 +46,7 @@
 ```scss
 // 声明函数
 @function vm($n) {
-  @return $n * 10 / 75 + vmin;
+  @return $n * 10 / 75 + vmin
 }
 
 // 使用
