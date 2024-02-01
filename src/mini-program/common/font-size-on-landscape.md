@@ -32,7 +32,7 @@
 ## 解决方案
 
 经过上述分析，我们布局时——无论横屏还是竖屏——只要保证尺寸计算的基准都是屏幕较短的“边”即可，`rpx`不能满足需要，可使用 `vmin` 替代。  
-但需要[换算](/mini-program/common/rpx-to-vmin)，例：
+但需要[换算](/mini-program/common/rpx-to-vmin.html)，例：
 
 ```css
 .selector {
