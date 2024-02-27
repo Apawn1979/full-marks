@@ -44,6 +44,7 @@ module.exports = [
   {
     title: 'CSS',
     children: [
+      '/css/grid',
       '/css/hide-scroll-bar',
       '/css/multi-line-text-overflow',
       '/css/safe-area-inset-bottom'
