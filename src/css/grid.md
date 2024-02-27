@@ -27,7 +27,7 @@ css：
   grid-template-columns: repeat(auto-fill, 160px); */
   
   /* 最小网格高度 80px，最大网格高度不限（被内容撑起） */
-  grid-auto-flow: minmax(80px, auto);
+  grid-auto-rows: minmax(80px, auto);
   
   /* 行间距和列间距都是 10px */
   gap: 10px;
