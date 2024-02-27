@@ -17,6 +17,7 @@ module.exports = {
     ]
   },
   head: [
+    ['link', { rel: 'icon', href: 'favicon.ico' }],
     ['link', { rel: 'stylesheet', href: '/katex-css/katex.min.css' }],
     ['link', { rel: "stylesheet", href: "/katex-css/github-markdown.min.css" }]
   ],
